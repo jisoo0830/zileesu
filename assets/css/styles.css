@@ -230,10 +230,20 @@ button {
   overflow: hidden;
 }
 
-.hero__image,
+.hero__media-scroll,
 .detail-hero > img {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__media-scroll {
+  overflow: hidden;
+}
+
+.hero__image,
+.detail-hero > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -738,7 +748,30 @@ figcaption {
   }
 
   .hero {
+    height: 91svh;
     min-height: 91svh;
+  }
+
+  .hero__media-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .hero__media-scroll::-webkit-scrollbar {
+    height: 0;
+  }
+
+  .hero__image {
+    width: auto;
+    max-width: none;
+    min-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left center;
+    scroll-snap-align: start;
   }
 
   .hero__content,
