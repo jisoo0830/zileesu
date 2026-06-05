@@ -40,7 +40,7 @@ body.is-menu-open {
 
 body.is-home {
   background: #191b1a;
-  color: #fff5db;
+  color: #d8d0c9;
 }
 
 img {
@@ -141,7 +141,7 @@ button {
   align-items: center;
   justify-self: start;
   gap: 24px;
-  color: #fff5db;
+  color: #d8d0c9;
   font-size: 0.78rem;
   text-transform: uppercase;
 }
@@ -166,7 +166,7 @@ button {
   align-items: center;
   justify-self: end;
   gap: 20px;
-  color: #fff5db;
+  color: #d8d0c9;
 }
 
 .header-actions a {
@@ -259,21 +259,21 @@ button {
   left: var(--page-space);
   bottom: 68px;
   max-width: 740px;
-  color: #fff5db;
+  color: #d8d0c9;
 }
 
 .hero__content p:last-child,
 .detail-hero__text p:last-child {
   max-width: 500px;
   margin-top: 20px;
-  color: rgba(255, 245, 219, 0.78);
+  color: rgba(216, 208, 201, 0.78);
   font-size: 1rem;
 }
 
 .hero__content .hero-statement {
   max-width: 720px;
   margin-top: 0;
-  color: #fff5db;
+  color: #d8d0c9;
   font-size: clamp(1.05rem, 2vw, 1.75rem);
   line-height: 1.2;
 }
@@ -283,7 +283,7 @@ button {
   right: var(--page-space);
   bottom: 68px;
   z-index: 1;
-  color: rgba(255, 245, 219, 0.76);
+  color: rgba(216, 208, 201, 0.76);
   font-size: 0.78rem;
   text-transform: uppercase;
 }
@@ -571,11 +571,11 @@ figcaption {
   .project-entry span,
   .copyright
 ) {
-  color: #fff5db;
+  color: #d8d0c9;
 }
 
 .is-home :where(.archive-list, .archive-row, .project-tile, .project-entry, .collection-card a, .info-block, .site-footer) {
-  border-color: rgba(255, 245, 219, 0.24);
+  border-color: rgba(216, 208, 201, 0.24);
 }
 
 .reveal {
