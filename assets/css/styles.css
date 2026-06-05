@@ -123,7 +123,7 @@ button {
 .brand-mark {
   display: inline-flex;
   align-items: center;
-  width: 146px;
+  width: 220px;
 }
 
 .brand-mark img,
@@ -471,7 +471,7 @@ figcaption {
 }
 
 .footer-logo {
-  width: 138px;
+  width: 220px;
   margin-bottom: 18px;
 }
 
@@ -572,7 +572,7 @@ figcaption {
   }
 
   .brand-mark {
-    width: 126px;
+    width: 164px;
   }
 
   .menu-toggle {
