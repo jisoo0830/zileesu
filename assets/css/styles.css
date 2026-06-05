@@ -8,8 +8,7 @@
   --color-accent: #849639;
   --color-accent-soft: #b8c875;
   --image-filter: saturate(0.84) sepia(0.18) hue-rotate(34deg);
-  --font-sans: "Helvetica Neue", Arial, "Noto Sans KR", sans-serif;
-  --font-serif: "Times New Roman", Times, "Noto Serif KR", serif;
+  --font-sans: "Helvetica Neue", Arial, "Pretendard", "Noto Sans KR", sans-serif;
   --header-height: 72px;
   --page-space: 56px;
 }
@@ -64,17 +63,17 @@ figure {
 
 h1,
 h2 {
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1;
 }
 
 h1 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 5.8rem;
 }
 
 h2 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 2.8rem;
 }
 
@@ -342,7 +341,6 @@ figcaption {
 
 .archive-row span:first-child {
   color: var(--color-text);
-  font-family: var(--font-serif);
   font-size: 1.8rem;
   text-transform: none;
 }
@@ -466,7 +464,7 @@ figcaption {
 
 .manifesto__copy p {
   color: var(--color-text);
-  font-family: var(--font-serif);
+  font-weight: 500;
   font-size: 2.4rem;
   line-height: 1.12;
 }
@@ -632,7 +630,8 @@ figcaption {
     padding: 110px 18px 34px;
     background: var(--color-bg);
     color: var(--color-text);
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
+    font-weight: 500;
     font-size: 2.65rem;
     text-transform: none;
     transform: translateY(-100%);
