@@ -128,17 +128,23 @@ button {
   border-color: rgba(255, 255, 255, 0.28);
 }
 
-.brand-mark {
-  display: inline-flex;
-  align-items: center;
-  width: 146px;
-  justify-self: start;
-}
-
-.brand-mark img,
 .header-wordmark img,
 .footer-logo {
   height: auto;
+}
+
+.header-categories {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  gap: 24px;
+  color: #040000;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.header-categories a {
+  padding: 8px 0;
 }
 
 .header-wordmark {
@@ -613,8 +619,8 @@ figcaption {
     backdrop-filter: none;
   }
 
-  .brand-mark {
-    width: 126px;
+  .header-categories {
+    display: none;
   }
 
   .header-wordmark {
