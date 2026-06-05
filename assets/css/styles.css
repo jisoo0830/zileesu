@@ -108,15 +108,15 @@ button {
   width: 100%;
   height: var(--header-height);
   padding: 0 var(--page-space);
-  background: rgba(var(--color-bg-rgb), 0.86);
-  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
-  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(22px) saturate(120%);
   transition: background 220ms ease, border-color 220ms ease;
 }
 
 .site-header.is-scrolled {
-  background: rgba(var(--color-bg-rgb), 0.96);
-  border-color: var(--color-line);
+  background: rgba(255, 255, 255, 0.34);
+  border-color: rgba(255, 255, 255, 0.28);
 }
 
 .brand-mark {
