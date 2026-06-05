@@ -44,7 +44,7 @@ img {
   height: auto;
 }
 
-:where(.hero__image, .detail-hero > img, .image-card img, .project-tile img, .project-entry img, .collection-card img, .about-hero__media img) {
+:where(.detail-hero > img, .image-card img, .project-tile img, .project-entry img, .collection-card img, .about-hero__media img) {
   filter: var(--image-filter);
 }
 
