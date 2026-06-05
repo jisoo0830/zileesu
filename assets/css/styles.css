@@ -107,9 +107,8 @@ button {
 }
 
 .site-header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
   z-index: 50;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -117,15 +116,14 @@ button {
   width: 100%;
   height: var(--header-height);
   padding: 0 var(--page-space);
-  background: rgba(255, 255, 255, 0.16);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(22px) saturate(120%);
+  background: #191b1a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: background 220ms ease, border-color 220ms ease;
 }
 
 .site-header.is-scrolled {
-  background: rgba(255, 255, 255, 0.34);
-  border-color: rgba(255, 255, 255, 0.28);
+  background: #191b1a;
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 .header-wordmark img,
@@ -138,7 +136,7 @@ button {
   align-items: center;
   justify-self: start;
   gap: 24px;
-  color: #040000;
+  color: #ffffff;
   font-size: 0.78rem;
   text-transform: uppercase;
 }
@@ -154,12 +152,16 @@ button {
   justify-self: center;
 }
 
+.header-wordmark img {
+  filter: invert(1);
+}
+
 .header-actions {
   display: flex;
   align-items: center;
   justify-self: end;
   gap: 20px;
-  color: #040000;
+  color: #ffffff;
 }
 
 .header-actions a {
@@ -219,7 +221,7 @@ button {
 
 .hero {
   position: relative;
-  min-height: 92svh;
+  min-height: calc(100svh - var(--header-height));
   overflow: hidden;
 }
 
@@ -616,7 +618,6 @@ figcaption {
     grid-template-columns: auto 1fr auto;
     padding-right: 18px;
     padding-left: 18px;
-    backdrop-filter: none;
   }
 
   .header-categories {
