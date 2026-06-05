@@ -144,7 +144,7 @@ button {
 .header-wordmark {
   display: inline-flex;
   align-items: center;
-  width: clamp(220px, 36vw, 430px);
+  width: clamp(150px, 18vw, 220px);
   justify-self: center;
 }
 
@@ -618,7 +618,7 @@ figcaption {
   }
 
   .header-wordmark {
-    width: min(145px, 37vw);
+    width: min(118px, 30vw);
   }
 
   .header-actions {
