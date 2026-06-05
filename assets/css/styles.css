@@ -123,7 +123,7 @@ button {
 .brand-mark {
   display: inline-flex;
   align-items: center;
-  width: 220px;
+  width: 146px;
 }
 
 .brand-mark img,
@@ -205,6 +205,16 @@ button {
   bottom: 68px;
   max-width: 740px;
   color: #ffffff;
+}
+
+.hero-wordmark {
+  width: min(760px, calc(100vw - var(--page-space) * 2));
+}
+
+.hero-wordmark img {
+  width: 100%;
+  height: auto;
+  filter: invert(1);
 }
 
 .hero__content p:last-child,
@@ -471,7 +481,7 @@ figcaption {
 }
 
 .footer-logo {
-  width: 220px;
+  width: 138px;
   margin-bottom: 18px;
 }
 
@@ -572,7 +582,11 @@ figcaption {
   }
 
   .brand-mark {
-    width: 164px;
+    width: 126px;
+  }
+
+  .hero-wordmark {
+    width: min(340px, calc(100vw - 36px));
   }
 
   .menu-toggle {
