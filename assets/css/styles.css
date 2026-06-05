@@ -38,6 +38,11 @@ body.is-menu-open {
   overflow: hidden;
 }
 
+body.is-home {
+  background: #191b1a;
+  color: #fff5db;
+}
+
 img {
   display: block;
   width: 100%;
@@ -136,7 +141,7 @@ button {
   align-items: center;
   justify-self: start;
   gap: 24px;
-  color: #ffffff;
+  color: #fff5db;
   font-size: 0.78rem;
   text-transform: uppercase;
 }
@@ -153,7 +158,7 @@ button {
 }
 
 .header-wordmark img {
-  filter: invert(1);
+  filter: none;
 }
 
 .header-actions {
@@ -161,7 +166,7 @@ button {
   align-items: center;
   justify-self: end;
   gap: 20px;
-  color: #ffffff;
+  color: #fff5db;
 }
 
 .header-actions a {
@@ -254,14 +259,14 @@ button {
   left: var(--page-space);
   bottom: 68px;
   max-width: 740px;
-  color: #ffffff;
+  color: #fff5db;
 }
 
 .hero__content p:last-child,
 .detail-hero__text p:last-child {
   max-width: 500px;
   margin-top: 20px;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 245, 219, 0.78);
   font-size: 1rem;
 }
 
@@ -270,7 +275,7 @@ button {
   right: var(--page-space);
   bottom: 68px;
   z-index: 1;
-  color: rgba(255, 255, 255, 0.76);
+  color: rgba(255, 245, 219, 0.76);
   font-size: 0.78rem;
   text-transform: uppercase;
 }
@@ -534,6 +539,35 @@ figcaption {
 .copyright {
   grid-column: 1 / -1;
   color: var(--color-muted);
+}
+
+.is-home .section,
+.is-home .site-footer {
+  background: #191b1a;
+}
+
+.is-home :where(
+  h1,
+  h2,
+  h3,
+  p,
+  a,
+  span,
+  figcaption,
+  .eyebrow,
+  .section-kicker,
+  .archive-row,
+  .archive-row span:first-child,
+  .archive-row span:last-child,
+  .project-tile span,
+  .project-entry span,
+  .copyright
+) {
+  color: #fff5db;
+}
+
+.is-home :where(.archive-list, .archive-row, .project-tile, .project-entry, .collection-card a, .info-block, .site-footer) {
+  border-color: rgba(255, 245, 219, 0.24);
 }
 
 .reveal {
