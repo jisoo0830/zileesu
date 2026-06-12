@@ -1,13 +1,13 @@
 :root {
-  --color-bg: #f4f7e9;
-  --color-bg-rgb: 244, 247, 233;
-  --color-panel: #fbfcf2;
-  --color-text: #172008;
-  --color-muted: #657044;
-  --color-line: #d7dfbd;
-  --color-accent: #849639;
-  --color-accent-soft: #b8c875;
-  --image-filter: saturate(0.84) sepia(0.18) hue-rotate(34deg);
+  --color-bg: #11100f;
+  --color-bg-rgb: 17, 16, 15;
+  --color-panel: #181514;
+  --color-text: #d8d0c9;
+  --color-muted: #9c918d;
+  --color-line: rgba(216, 208, 201, 0.22);
+  --color-accent: #d94b78;
+  --color-accent-soft: #7d2f48;
+  --image-filter: saturate(0.96) contrast(1.04) brightness(0.94);
   --font-sans: "Helvetica Neue", Arial, "Pretendard", "Noto Sans KR", sans-serif;
   --header-height: 72px;
   --page-space: 56px;
@@ -39,7 +39,7 @@ body.is-menu-open {
 }
 
 body.is-home {
-  background: #191b1a;
+  background: var(--color-bg);
   color: #d8d0c9;
 }
 
@@ -121,14 +121,14 @@ button {
   width: 100%;
   height: var(--header-height);
   padding: 0 var(--page-space);
-  background: #191b1a;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(216, 208, 201, 0.12);
   transition: background 220ms ease, border-color 220ms ease;
 }
 
 .site-header.is-scrolled {
-  background: #191b1a;
-  border-color: rgba(255, 255, 255, 0.12);
+  background: var(--color-bg);
+  border-color: rgba(216, 208, 201, 0.18);
 }
 
 .header-wordmark img,
@@ -606,7 +606,7 @@ figcaption {
 
 .is-home .section,
 .is-home .site-footer {
-  background: #191b1a;
+  background: var(--color-bg);
 }
 
 .is-home :where(
