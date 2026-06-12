@@ -398,8 +398,13 @@ figcaption,
 .lookbook .image-card--wide {
   display: grid;
   grid-column: auto;
+  justify-items: start;
   min-height: calc(100svh - var(--header-height));
   align-content: center;
+}
+
+.lookbook .image-card:nth-child(even) {
+  justify-items: end;
 }
 
 .lookbook .image-card + .image-card {
@@ -410,12 +415,16 @@ figcaption,
 .lookbook .image-card--wide img,
 .lookbook .image-card--tall img {
   width: auto;
-  max-width: 100%;
+  max-width: min(100%, 72vw);
   max-height: 78svh;
-  margin: 0 auto;
+  margin: 0;
   aspect-ratio: auto;
   object-fit: contain;
   filter: none;
+}
+
+.lookbook .image-card figcaption {
+  width: min(100%, 72vw);
 }
 
 figcaption {
@@ -846,6 +855,27 @@ figcaption {
   .image-card--wide img,
   .image-card--tall img {
     aspect-ratio: 4 / 5;
+  }
+
+  .lookbook .image-card,
+  .lookbook .image-card--wide {
+    justify-items: start;
+  }
+
+  .lookbook .image-card:nth-child(even) {
+    justify-items: end;
+  }
+
+  .lookbook .image-card img,
+  .lookbook .image-card--wide img,
+  .lookbook .image-card--tall img {
+    max-width: 86vw;
+    max-height: 72svh;
+    aspect-ratio: auto;
+  }
+
+  .lookbook .image-card figcaption {
+    width: 86vw;
   }
 
   .archive-row {
