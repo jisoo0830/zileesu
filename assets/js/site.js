@@ -58,6 +58,20 @@ const productData = {
     image: "assets/images/look-01.jpg?v=shop-20260612b",
     description:
       "A chain object designed to move between necklace, belt and layered styling without a fixed prescription.",
+    detailImages: [
+      "assets/images/fuse-detail-01.jpg?v=fuse-20260613",
+      "assets/images/fuse-detail-02.jpg?v=fuse-20260613",
+      "assets/images/fuse-detail-03.jpg?v=fuse-20260613",
+      "assets/images/fuse-detail-04.jpg?v=fuse-20260613",
+      "assets/images/fuse-detail-05.jpg?v=fuse-20260613",
+      "assets/images/fuse-detail-06.jpg?v=fuse-20260613",
+      "assets/images/fuse-detail-07.jpg?v=fuse-20260613",
+      "assets/images/fuse-detail-08.jpg?v=fuse-20260613",
+      "assets/images/fuse-detail-09.jpg?v=fuse-20260613",
+      "assets/images/fuse-detail-10.jpg?v=fuse-20260613",
+      "assets/images/fuse-detail-11.jpg?v=fuse-20260613",
+      "assets/images/fuse-detail-12.jpg?v=fuse-20260613",
+    ],
   },
   "open-ring": {
     title: "WEARABLE OPEN RING",
@@ -81,6 +95,7 @@ const productTitle = document.querySelector("[data-product-title]");
 const productPrice = document.querySelector("[data-product-price]");
 const productDescription = document.querySelector("[data-product-description]");
 const productCloseButton = document.querySelector(".product-modal__close");
+const productGallery = document.querySelector("[data-product-gallery]");
 let lastProductTrigger = null;
 
 const closeProductModal = () => {
@@ -101,6 +116,18 @@ document.querySelectorAll("[data-product-id]").forEach((trigger) => {
     productDescription.textContent = product.description;
     productImage.src = product.image;
     productImage.alt = `${product.title} product image`;
+    if (productGallery) {
+      productGallery.innerHTML = "";
+      (product.detailImages || []).forEach((src, index) => {
+        const figure = document.createElement("figure");
+        const image = document.createElement("img");
+        image.src = src;
+        image.alt = `${product.title} detail image ${index + 1}`;
+        image.loading = "lazy";
+        figure.append(image);
+        productGallery.append(figure);
+      });
+    }
     productModal.hidden = false;
     document.body.classList.add("is-product-open");
     productCloseButton.focus();
