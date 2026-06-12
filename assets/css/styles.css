@@ -390,6 +390,34 @@ figcaption,
   aspect-ratio: 4 / 5;
 }
 
+.lookbook .image-grid--editorial {
+  display: block;
+}
+
+.lookbook .image-card,
+.lookbook .image-card--wide {
+  display: grid;
+  grid-column: auto;
+  min-height: calc(100svh - var(--header-height));
+  align-content: center;
+}
+
+.lookbook .image-card + .image-card {
+  margin-top: 10svh;
+}
+
+.lookbook .image-card img,
+.lookbook .image-card--wide img,
+.lookbook .image-card--tall img {
+  width: auto;
+  max-width: 100%;
+  max-height: 78svh;
+  margin: 0 auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  filter: none;
+}
+
 figcaption {
   display: flex;
   justify-content: space-between;
