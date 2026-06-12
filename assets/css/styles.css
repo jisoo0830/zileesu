@@ -38,6 +38,10 @@ body.is-menu-open {
   overflow: hidden;
 }
 
+body.is-product-open {
+  overflow: hidden;
+}
+
 body.is-home {
   background: var(--color-bg);
   color: #d8d0c9;
@@ -425,6 +429,191 @@ figcaption,
 
 .lookbook .image-card figcaption {
   width: min(100%, 72vw);
+}
+
+.product-trigger {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.product-trigger:focus-visible {
+  outline: 1px solid var(--color-accent);
+  outline-offset: 10px;
+}
+
+.product-modal[hidden] {
+  display: none;
+}
+
+.product-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  color: #121212;
+}
+
+.product-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 16, 15, 0.72);
+}
+
+.product-modal__panel {
+  position: absolute;
+  inset: 22px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  min-height: calc(100svh - 44px);
+  background: #f7f5f2;
+  box-shadow: 0 22px 80px rgba(0, 0, 0, 0.34);
+}
+
+.product-modal__close {
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  z-index: 2;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: #121212;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.product-modal__media {
+  display: grid;
+  min-height: 100%;
+  place-items: center;
+  padding: clamp(42px, 6vw, 92px);
+  background: #f2f1ef;
+}
+
+.product-modal__media img {
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100svh - 160px);
+  object-fit: contain;
+}
+
+.product-modal__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(42px, 6vw, 92px);
+}
+
+.product-modal__eyebrow {
+  margin-bottom: 34px;
+  color: #77716d;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.product-modal__info h2 {
+  color: #121212;
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.product-meta {
+  margin: 30px 0 24px;
+}
+
+.product-meta div {
+  display: grid;
+  grid-template-columns: 0.42fr 1fr;
+  align-items: center;
+  gap: 24px;
+}
+
+.product-meta dt,
+.product-option span {
+  color: #121212;
+  font-weight: 600;
+}
+
+.product-meta dd {
+  margin: 0;
+  color: #121212;
+}
+
+.product-option {
+  display: grid;
+  grid-template-columns: 0.42fr 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.product-option select {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #cfcac5;
+  border-radius: 0;
+  background: #f7f5f2;
+  color: #77716d;
+  font: inherit;
+  padding: 0 12px;
+}
+
+.product-disclosure {
+  border-top: 1px solid #ded9d4;
+}
+
+.product-disclosure:last-of-type {
+  border-bottom: 1px solid #ded9d4;
+}
+
+.product-disclosure summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 0;
+  color: #121212;
+  font-size: 1.12rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  list-style: none;
+}
+
+.product-disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+.product-disclosure summary::after {
+  content: ">";
+}
+
+.product-disclosure p {
+  max-width: 560px;
+  padding: 0 0 22px;
+  color: #5d5854;
+}
+
+.product-action {
+  min-height: 58px;
+  margin-top: 12px;
+  border: 2px solid #121212;
+  background: transparent;
+  color: #121212;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.product-action--primary {
+  margin-top: 44px;
+  background: #000;
+  color: #fff;
 }
 
 figcaption {
@@ -876,6 +1065,46 @@ figcaption {
 
   .lookbook .image-card figcaption {
     width: 86vw;
+  }
+
+  .product-modal {
+    overflow-y: auto;
+  }
+
+  .product-modal__panel {
+    position: relative;
+    inset: auto;
+    grid-template-columns: 1fr;
+    min-height: 100svh;
+  }
+
+  .product-modal__close {
+    position: fixed;
+    top: 16px;
+    right: 18px;
+  }
+
+  .product-modal__media {
+    min-height: 52svh;
+    padding: 58px 18px 28px;
+  }
+
+  .product-modal__media img {
+    max-height: 44svh;
+  }
+
+  .product-modal__info {
+    padding: 34px 18px 42px;
+  }
+
+  .product-meta div,
+  .product-option {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .product-action--primary {
+    margin-top: 32px;
   }
 
   .archive-row {

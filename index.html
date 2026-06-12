@@ -6,7 +6,7 @@
     <meta name="description" content="UPERMODE fashion brand archive, lookbook and campaign website.">
     <title>UPERMODE | Archive</title>
     <link rel="preload" href="assets/images/hero-01.jpg" as="image">
-    <link rel="stylesheet" href="assets/css/styles.css?v=tone-20260612">
+    <link rel="stylesheet" href="assets/css/styles.css?v=product-modal-20260613">
   </head>
   <body class="is-home" data-page="home">
     <a class="skip-link" href="#main">본문으로 이동</a>
@@ -88,17 +88,63 @@
         </div>
         <div class="image-grid image-grid--editorial">
           <figure class="image-card image-card--wide reveal">
-            <img src="assets/images/look-01.jpg?v=shop-20260612b" alt="Shop product image 01">
+            <button class="product-trigger" type="button" data-product-id="fuse-chain" aria-haspopup="dialog">
+              <img src="assets/images/look-01.jpg?v=shop-20260612b" alt="Wearable Fuse Chain product image">
+            </button>
             <figcaption>01 / Wearable Fuse Chain</figcaption>
           </figure>
           <figure class="image-card reveal">
-            <img src="assets/images/look-02.jpg?v=shop-20260612b" alt="Shop product image 02">
+            <button class="product-trigger" type="button" data-product-id="open-ring" aria-haspopup="dialog">
+              <img src="assets/images/look-02.jpg?v=shop-20260612b" alt="WEARABLE OPEN RING product image">
+            </button>
             <figcaption>02 / WEARABLE OPEN RING</figcaption>
           </figure>
           <figure class="image-card reveal">
-            <img src="assets/images/look-03.jpg?v=shop-20260612b" alt="Shop product image 03">
+            <button class="product-trigger" type="button" data-product-id="edge-ring" aria-haspopup="dialog">
+              <img src="assets/images/look-03.jpg?v=shop-20260612b" alt="WEARABLE EDGE RING product image">
+            </button>
             <figcaption>03 / WEARABLE EDGE RING</figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section class="product-modal" role="dialog" aria-modal="true" aria-labelledby="product-modal-title" hidden data-product-modal>
+        <div class="product-modal__backdrop" data-product-close></div>
+        <div class="product-modal__panel">
+          <button class="product-modal__close" type="button" aria-label="Close product window" data-product-close>Close</button>
+          <div class="product-modal__media">
+            <img src="assets/images/look-01.jpg?v=shop-20260612b" alt="" data-product-image>
+          </div>
+          <div class="product-modal__info">
+            <p class="product-modal__eyebrow">UPPERMODE OBJECT</p>
+            <h2 id="product-modal-title" data-product-title>Wearable Fuse Chain</h2>
+            <dl class="product-meta">
+              <div>
+                <dt>판매가</dt>
+                <dd data-product-price>KRW 139,000</dd>
+              </div>
+            </dl>
+            <label class="product-option">
+              <span>SIZE</span>
+              <select data-product-option>
+                <option value="">-[필수] 옵션을 선택해 주세요 -</option>
+                <option>ONE SIZE</option>
+                <option>MADE TO ORDER</option>
+              </select>
+            </label>
+            <details class="product-disclosure">
+              <summary>DESCRIPTION</summary>
+              <p data-product-description>
+                A wearable object designed to invite multiple ways of styling and interpretation.
+              </p>
+            </details>
+            <details class="product-disclosure">
+              <summary>SIZE GUIDE</summary>
+              <p>Each piece is designed as a flexible object. Select ONE SIZE unless noted otherwise.</p>
+            </details>
+            <button class="product-action product-action--primary" type="button">BUY NOW</button>
+            <button class="product-action" type="button">ADD TO CART</button>
+          </div>
         </div>
       </section>
 
@@ -160,6 +206,6 @@
       <p class="copyright">© <span data-year></span> UPERMODE. All rights reserved.</p>
     </footer>
 
-    <script src="assets/js/site.js"></script>
+    <script src="assets/js/site.js?v=product-modal-20260613"></script>
   </body>
 </html>

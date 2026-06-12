@@ -50,3 +50,69 @@ if ("IntersectionObserver" in window) {
 document.querySelectorAll("[data-year]").forEach((item) => {
   item.textContent = new Date().getFullYear();
 });
+
+const productData = {
+  "fuse-chain": {
+    title: "Wearable Fuse Chain",
+    price: "KRW 139,000",
+    image: "assets/images/look-01.jpg?v=shop-20260612b",
+    description:
+      "A chain object designed to move between necklace, belt and layered styling without a fixed prescription.",
+  },
+  "open-ring": {
+    title: "WEARABLE OPEN RING",
+    price: "KRW 89,000",
+    image: "assets/images/look-02.jpg?v=shop-20260612b",
+    description:
+      "An open ring form that can be worn across different fingers and gestures as a flexible silver object.",
+  },
+  "edge-ring": {
+    title: "WEARABLE EDGE RING",
+    price: "KRW 92,000",
+    image: "assets/images/look-03.jpg?v=shop-20260612b",
+    description:
+      "A sculptural edge ring shaped for shifting positions, stacked styling and expressive hand movement.",
+  },
+};
+
+const productModal = document.querySelector("[data-product-modal]");
+const productImage = document.querySelector("[data-product-image]");
+const productTitle = document.querySelector("[data-product-title]");
+const productPrice = document.querySelector("[data-product-price]");
+const productDescription = document.querySelector("[data-product-description]");
+const productCloseButton = document.querySelector(".product-modal__close");
+let lastProductTrigger = null;
+
+const closeProductModal = () => {
+  if (!productModal) return;
+  productModal.hidden = true;
+  document.body.classList.remove("is-product-open");
+  if (lastProductTrigger) lastProductTrigger.focus();
+};
+
+document.querySelectorAll("[data-product-id]").forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const product = productData[trigger.dataset.productId];
+    if (!product || !productModal) return;
+
+    lastProductTrigger = trigger;
+    productTitle.textContent = product.title;
+    productPrice.textContent = product.price;
+    productDescription.textContent = product.description;
+    productImage.src = product.image;
+    productImage.alt = `${product.title} product image`;
+    productModal.hidden = false;
+    document.body.classList.add("is-product-open");
+    productCloseButton.focus();
+  });
+});
+
+document.querySelectorAll("[data-product-close]").forEach((item) => {
+  item.addEventListener("click", closeProductModal);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && productModal && !productModal.hidden) {
+    closeProductModal();
+  }
+});
