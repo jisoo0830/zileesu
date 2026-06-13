@@ -76,9 +76,18 @@ const productData = {
   "open-ring": {
     title: "WEARABLE OPEN RING",
     price: "KRW 89,000",
-    image: "assets/images/look-02.jpg?v=shop-20260612b",
+    image: "assets/images/open-ring-detail-01.jpg?v=open-ring-20260614",
     description:
       "An open ring form that can be worn across different fingers and gestures as a flexible silver object.",
+    detailImages: [
+      "assets/images/open-ring-detail-01.jpg?v=open-ring-20260614",
+      "assets/images/open-ring-detail-02.jpg?v=open-ring-20260614",
+      "assets/images/open-ring-detail-03.jpg?v=open-ring-20260614",
+      "assets/images/open-ring-detail-04.jpg?v=open-ring-20260614",
+      "assets/images/open-ring-detail-05.jpg?v=open-ring-20260614",
+      "assets/images/open-ring-detail-06.jpg?v=open-ring-20260614",
+      "assets/images/open-ring-detail-07.jpg?v=open-ring-20260614",
+    ],
   },
   "edge-ring": {
     title: "WEARABLE EDGE RING",
