@@ -92,9 +92,13 @@ const productData = {
   "edge-ring": {
     title: "WEARABLE EDGE RING",
     price: "KRW 92,000",
-    image: "assets/images/look-03.jpg?v=shop-20260612b",
+    image: "assets/images/edge-ring-detail-01.jpg?v=edge-ring-20260614",
     description:
       "A sculptural edge ring shaped for shifting positions, stacked styling and expressive hand movement.",
+    detailImages: [
+      "assets/images/edge-ring-detail-01.jpg?v=edge-ring-20260614",
+      "assets/images/edge-ring-detail-02.jpg?v=edge-ring-20260614",
+    ],
   },
 };
 
