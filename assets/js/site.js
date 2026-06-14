@@ -1,6 +1,8 @@
 const header = document.querySelector("[data-header]");
 const menu = document.querySelector("[data-menu]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
+const heroMediaScroll = document.querySelector(".hero__media-scroll");
+const heroImage = document.querySelector(".hero__image");
 
 const setHeaderState = () => {
   if (!header) return;
@@ -9,6 +11,26 @@ const setHeaderState = () => {
 
 setHeaderState();
 window.addEventListener("scroll", setHeaderState, { passive: true });
+
+const setMobileHeroStart = () => {
+  if (!heroMediaScroll || !heroImage) return;
+  if (!window.matchMedia("(max-width: 760px)").matches) return;
+
+  const maxScroll = heroMediaScroll.scrollWidth - heroMediaScroll.clientWidth;
+  if (maxScroll <= 0) return;
+  heroMediaScroll.scrollLeft = maxScroll * 0.45;
+};
+
+if (heroImage) {
+  if (heroImage.complete) {
+    setMobileHeroStart();
+  } else {
+    heroImage.addEventListener("load", setMobileHeroStart, { once: true });
+  }
+  window.addEventListener("orientationchange", () => {
+    window.setTimeout(setMobileHeroStart, 260);
+  });
+}
 
 if (menu && menuToggle) {
   menuToggle.addEventListener("click", () => {
