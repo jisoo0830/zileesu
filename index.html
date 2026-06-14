@@ -6,7 +6,7 @@
     <meta name="description" content="UPERMODE fashion brand archive, lookbook and campaign website.">
     <title>UPERMODE | Archive</title>
     <link rel="preload" href="assets/images/hero-01.jpg" as="image">
-    <link rel="stylesheet" href="assets/css/styles.css?v=fuse-details-20260613">
+    <link rel="stylesheet" href="assets/css/styles.css?v=disabled-header-links-20260614">
   </head>
   <body class="is-home" data-page="home">
     <a class="skip-link" href="#main">본문으로 이동</a>
@@ -14,31 +14,31 @@
     <header class="site-header" data-header>
       <nav class="header-categories" aria-label="Primary categories">
         <a href="#lookbook">Shop</a>
-        <a href="collections/">Collection</a>
-        <a href="about/">About</a>
+        <span aria-disabled="true">Collection</span>
+        <span aria-disabled="true">About</span>
       </nav>
       <a class="header-wordmark" href="index.html" aria-label="UPERMODE home">
         <img src="assets/brand/header-logo.svg" alt="UPERMODE">
       </a>
       <div class="header-actions" aria-label="Quick links">
-        <a href="about/" aria-label="Account">
+        <span aria-label="Account" aria-disabled="true">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 12.1a4.4 4.4 0 1 0 0-8.8 4.4 4.4 0 0 0 0 8.8Z"/>
             <path d="M4.9 21.2c.9-4.2 3.4-6.3 7.1-6.3s6.2 2.1 7.1 6.3"/>
           </svg>
-        </a>
-        <a href="collections/" aria-label="Search">
+        </span>
+        <span aria-label="Search" aria-disabled="true">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M10.8 18.1a7.3 7.3 0 1 0 0-14.6 7.3 7.3 0 0 0 0 14.6Z"/>
             <path d="m16.2 16.2 5.1 5.1"/>
           </svg>
-        </a>
-        <a href="projects/" aria-label="Bag">
+        </span>
+        <span aria-label="Bag" aria-disabled="true">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M6.2 8.4h11.6l1 13H5.2l1-13Z"/>
             <path d="M9 8.4V6.2a3 3 0 0 1 6 0v2.2"/>
           </svg>
-        </a>
+        </span>
       </div>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
         <span></span>
@@ -46,8 +46,8 @@
       </button>
       <nav class="site-nav" id="site-menu" data-menu>
         <a href="#lookbook">Shop</a>
-        <a href="collections/">Collection</a>
-        <a href="about/">About</a>
+        <span aria-disabled="true">Collection</span>
+        <span aria-disabled="true">About</span>
       </nav>
     </header>
 

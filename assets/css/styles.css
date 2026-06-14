@@ -150,7 +150,8 @@ button {
   text-transform: uppercase;
 }
 
-.header-categories a {
+.header-categories a,
+.header-categories span {
   padding: 8px 0;
 }
 
@@ -173,7 +174,8 @@ button {
   color: #d8d0c9;
 }
 
-.header-actions a {
+.header-actions a,
+.header-actions span {
   display: grid;
   width: 28px;
   height: 28px;
@@ -199,7 +201,8 @@ button {
   text-transform: uppercase;
 }
 
-.site-nav a {
+.site-nav a,
+.site-nav span {
   position: relative;
   padding: 8px 0;
 }
