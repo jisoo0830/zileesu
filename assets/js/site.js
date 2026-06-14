@@ -54,7 +54,7 @@ document.querySelectorAll("[data-year]").forEach((item) => {
 const productData = {
   "fuse-chain": {
     title: "Wearable Fuse Chain",
-    price: "KRW 139,000",
+    price: "KRW 159,000",
     image: "assets/images/look-01.jpg?v=shop-20260612b",
     description:
       "A chain object designed to move between necklace, belt and layered styling without a fixed prescription.",
@@ -75,7 +75,7 @@ const productData = {
   },
   "open-ring": {
     title: "WEARABLE OPEN RING",
-    price: "KRW 89,000",
+    price: "KRW 139,000",
     image: "assets/images/open-ring-detail-01.jpg?v=open-ring-20260614",
     description:
       "An open ring form that can be worn across different fingers and gestures as a flexible silver object.",
@@ -91,7 +91,7 @@ const productData = {
   },
   "edge-ring": {
     title: "WEARABLE EDGE RING",
-    price: "KRW 92,000",
+    price: "KRW 89,000",
     image: "assets/images/edge-ring-detail-01.jpg?v=edge-ring-20260614",
     description:
       "A sculptural edge ring shaped for shifting positions, stacked styling and expressive hand movement.",
