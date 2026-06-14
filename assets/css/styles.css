@@ -431,7 +431,8 @@ figcaption,
 }
 
 .lookbook .image-card figcaption {
-  width: min(100%, 72vw);
+  width: auto;
+  max-width: min(100%, 72vw);
 }
 
 .product-trigger {
@@ -665,6 +666,7 @@ figcaption {
   min-height: 74px;
   border-bottom: 1px solid var(--color-line);
   color: var(--color-muted);
+  cursor: default;
 }
 
 .archive-row span:first-child {
@@ -1094,7 +1096,8 @@ figcaption {
   }
 
   .lookbook .image-card figcaption {
-    width: 86vw;
+    width: auto;
+    max-width: 86vw;
   }
 
   .product-modal {
